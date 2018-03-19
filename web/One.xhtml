@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/template1.xhtml">
+
+            <ui:define name="top">
+                <h1>Please Enter Your information. These Fields are mandatory to complete registration</h1>
+            </ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    Enter your Name:<h:inputText required="true" requiredMessage="Enter your name" value="#{data.username}" /><br/>
+                    Enter Your Email Address:<h:inputText required="true" requiredMessage="Enter your email address" value="#{data.email}" /><br/>
+                    Enter Your Phone Number:<h:inputText required="true" requiredMessage="Enter your Phone Number" value="#{data.phone}" /><br/>
+                        <h:commandButton action="Two" value="Login" />
+                        
+                    </h:form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                <h6>All Rights Reserved 2018.</h6>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

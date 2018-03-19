@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/template1.xhtml">
+
+            <ui:define name="top">
+                <h1>Thank you for Registering!</h1>
+                <h4>This is your Profile</h4>
+            </ui:define>
+
+            <ui:define name="content">
+                <link href="./resources/css/default.css" rel="stylesheet" type="text/css"/>
+                <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css"/>
+                Your name is : <h:outputText value="#{data.username}" /><br/>
+                Your Email address is : <h:outputText value="#{data.email}" /><br/>
+                Your Phone Number is : <h:outputText value="#{data.phone}" />
+            </ui:define>
+
+            <ui:define name="bottom">
+                <h6>All Rights Reserved 2018.</h6>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
